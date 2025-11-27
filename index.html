@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fokkefélés Kft.</title>
+  
+  <script src="products.json"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/fokkefeles-logo.png" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav-wrapper">
+    <div class="logo">
+      <img src="assets/fokkefeles-logo.png" alt="Fokkefélés logó" class="logo-img">
+    </div>
+
+    <nav class="nav">
+      <a href="#">Főoldal</a>
+      <a href="#termekek">Termékek</a>
+      <a href="#kapcsolatok">Kapcsolat</a>
+    </nav>
+
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </div>
+</header>
+
+<section class="intro-section">
+  <div class="container">
+    <h2>Üdvözlünk a weboldalunkon!</h2>
+    <p>
+      Célunk, hogy egyszerűen, gyorsan és megbízhatóan
+      juttassunk el hozzád minőségi, kényelmes és hatékony
+      fogkeféket. Nálunk megtalálod a mindennapi használatra
+      tervezett, tartós és kíméletes fogkeféket, amelyek
+      segítenek abban, hogy a mosolyod mindig ragyogó legyen.
+      Válogass kínálatunkból, és találd meg a számodra tökéletes darabot!
+    </p>
+    <p id="termekek">
+      Nézz körül, és válaszd ki a kedvenceidet!
+    </p>
+  </div>
+</section>
+
+<main class="container">
+  <h1 class="page-title">Termékeink</h1>
+
+  <div id="product-grid" class="product-grid"></div>
+
+</main>
+
+<!-- Kosár panel -->
+<div id="cart-panel" class="cart-panel">
+  <h2>Kosár</h2>
+  <div id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="total-line">
+      Összesen: <span id="cart-total">0 Ft</span>
+    </div>
+    <button class="checkout">Megrendelés</button>
+  </div>
+</div>
+
+<!-- Kapcsolat szekció -->
+<section id="kapcsolat" style="background-color: #000; padding: 50px 20px; text-align: center; font-family: Arial, sans-serif;">
+  <h2 id="kapcsolatok" style="color: #00ffc6; font-size: 32px; margin-bottom: 20px;">Kapcsolat</h2>
+  <p style="color: #707070; font-size: 16px; max-width: 600px; margin: 0 auto 30px;">
+    Kérdésed van, vagy segítségre van szükséged? Írj nekünk — örömmel válaszolunk!
+  </p>
+
+  <div style="margin-bottom: 30px;">
+    <p style="margin: 5px 0; color: #00ffc6;"><strong>E-mail:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fokkefeles.kft@gmail.com
+      &su=Kapcsolat felvétel&body=Kereszt név:%20%0ATelefonszám:%20%0AAz üzenet kifejtve:"
+      target="_blank"
+      style="color: #09997a; text-decoration: none;">
+      fokkefeles.kft@gmail.com</a></p>
+    <p style="margin: 5px 0; color: #00ffc6;"><strong>Telefonszám:</strong> +36 30 131 9835</p>
+    <p style="margin: 5px 0; color: #00ffc6;"><strong>Cím:</strong> 4700 Mátészalka, Alkotmány út 11-2. em. 8. ajtó</p>
+  </div>
+
+  <form action="/send-message" method="post" style="max-width: 500px; margin: 0 auto; text-align: left;">
+    <label for="name" style="display: block; margin-bottom: 5px; color: #555;">Név:</label>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+    <label for="email" style="display: block; margin-bottom: 5px; color: #555;">E-mail cím:</label>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+    <label for="message" style="display: block; margin-bottom: 5px; color: #555;">Üzenet:</label>
+    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+    
+    <button type="submit" style="background-color: #00ffc8ca; color: #000000; padding: 12px 25px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Küldés</button>
+  </form>
+  <script>
+  document.querySelector("#kapcsolat form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Köszönjük! Üzeneted sikeresen elküldve.");
+    this.reset();
+  });
+  </script>
+
+</section>
+
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Hagyományos fogkefe (silicon touch)",
+    "price": 1990,
+    "img": "assets/egyes.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Bronzosított 6 + 1 funkciós '2312'",
+    "price": 45299,
+    "img": "assets/kettes.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Letisztult 3 + 1 dupla akkumulátoros 'merida'",
+    "price": 39967,
+    "img": "assets/harmadik.jpg"
+  },
+  {
+    "id": 4,
+    "title": "2 db Hagyományos és 2 db elemes fogkefe",
+    "price": 6990,
+    "img": "assets/negy.png"
+  }
+]
